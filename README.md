@@ -10,10 +10,10 @@ var dbContext = new SQLServerDbContext(connectionString);
 var repository = new SQLServerRepository<Continent, int>(dbContext);
 
 var item = new Continent();
-item.Code = "US";
+item.Code = "NA";
 item.ContinentId = 1;
 item.CultureId = 7;
-item.Name = "United States";
+item.Name = "North America";
 
 //add
 repository.Add(item);
