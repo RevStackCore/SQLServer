@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>RevStackCore.SQLServer</PackageId>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Description>SQL Server implementation of the RevStackCore repository pattern.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Net Standard 1.6 release</PackageReleaseNotes>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageTags>SQL Server RevStackCore</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RevStackCore.Extensions" Version="1.0.7" />
+    <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="RevStackCore.SQL.Client" Version="1.0.0" />
+    <PackageReference Include="RevStackCore.Pattern.SQL" Version="1.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+</Project>
