@@ -49,11 +49,11 @@ SQLServerRepository<TEntity,Tkey> implements IRepository<TEntity,TKey> for basic
 SQLServerRepository<TEntity,Tkey> implements ISQLRepository<TEntity,TKey> for Crud + SQL query operations
 
 ## Notes on Implementations
-RevStackCore.SQLServer is a extended RevStackCore Repository pattern wrapper around Stack Exchange Dapper. In addition, RevStackCore.SQLServer offers POCO First capability via a RegisterTable extension method.
+RevStackCore.SQLServer is an extension of the RevStackCore Repository pattern wrapper around Stack Exchange Dapper. In addition, RevStackCore.SQLServer offers POCO First capability via a RegisterTable extension method.
 
 
 # POCO First
-POCO First, or Code First, means we create and define our SQL Server tables from appropriately annotated C# classes. Consistent with the repository pattern, all POCO items must implement an Id prop(TKey Id). By default, Id will be the Table primary key. 
+POCO First, or Code First, means we create and define our SQL Server tables from C# classes. Consistent with the repository pattern, all POCO items must implement an Id prop(TKey Id). By default, Id will be the Table primary key. 
 
 
 For example:
@@ -243,27 +243,8 @@ https://github.com/RevStackCore/Identity
 
 # Asynchronous Services
 ```cs
-IEnumerable<TEntity> Get();
-TEntity GetById(TKey id);
-IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
-TEntity Add(TEntity entity);
-TEntity Update(TEntity entity);
-void Delete(TEntity entity);
-IEnumerable<TResult> ExecuteProcedure<TResult>(string sp_procedure, object param) where TResult : class;
-IEnumerable<TResult> ExecuteProcedure<TResult>(string sp_procedure) where TResult : class;
-TResult ExecuteProcedureSingle<TResult>(string sp_procedure, object param) where TResult : class;
-TResult ExecuteProcedureSingle<TResult>(string sp_procedure) where TResult : class;
-TValue ExecuteScalar<TValue>(string s_function, object param) where TValue : struct;
-TValue ExecuteScalar<TValue>(string s_function) where TValue : struct;
-TResult ExecuteFunction<TResult>(string s_function, object param) where TResult : class;
-TResult ExecuteFunction<TResult>(string s_function) where TResult : class;
-DynamicParameters Execute(string sp_procedure, DynamicParameters param);
-IEnumerable<TResult> ExecuteFunctionWithResults<TResult>(string s_function) where TResult : class;
-IEnumerable<TResult> ExecuteFunctionWithResults<TResult>(string s_function, object param) where TResult : class;
-void Execute(string sp_procedure, object param);
-void Execute(string sp_procedure);
-IDbConnection Db { get; }
 
+IDbConnection Db { get; }
 Task<IEnumerable<TEntity>> GetAsync();
 Task<TEntity> GetByIdAsync(TKey id);
 Task<IQueryable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate);
