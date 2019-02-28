@@ -211,7 +211,7 @@ class Program
         var serviceCollection = new ServiceCollection();
         ConfigureServices(serviceCollection);
         var serviceProvider = serviceCollection.BuildServiceProvider();
-        var db = serviceProvider.GetService<MySQLDbContext>();
+        var db = serviceProvider.GetService<SQLServerDbContext>();
         var dataService = serviceProvider.GetService<IDataService>();
         db.RegisterTable<Person, string>()
           .RegisterTable<Tag, int>()
@@ -223,10 +223,10 @@ class Program
     {
         string connectionString = "";
         services
-            .AddSingleton(x => new MySQLDbContext(connectionString))
-            .AddSingleton<IRepository<Person, string>, MySQLRepository<Person, string>>()
-            .AddSingleton<IRepository<Tag, int>, MySQLRepository<Tag, int>>()
-            .AddSingleton<ISQLRepository<Contact, int>, MySQLRepository<Contact, int>>()
+            .AddSingleton(x => new SQLServerDbContext(connectionString))
+            .AddSingleton<IRepository<Person, string>, SQLServerRepository<Person, string>>()
+            .AddSingleton<IRepository<Tag, int>, SQLServerRepository<Tag, int>>()
+            .AddSingleton<ISQLRepository<Contact, int>, SQLServerRepository<Contact, int>>()
             .AddSingleton<IDataService, DataService>();
 
         services.AddLogging();
@@ -268,8 +268,8 @@ Task ExecuteAsync(string sp_procedure);
 ```
 
 # Implementations
-SQLServerService<TEntity,Tkey> implements IService<TEntity,TKey> for basic Async Crud operations and FindAsync
-SQLServerService<TEntity,Tkey> implements ISQLService<TEntity,TKey> for Async Crud + SQL query operations
+SQLService<TEntity,Tkey> implements IService<TEntity,TKey> for basic Async Crud operations and FindAsync
+SQLService<TEntity,Tkey> implements ISQLService<TEntity,TKey> for Async Crud + SQL query operations
 
 
 
