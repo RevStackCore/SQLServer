@@ -1,6 +1,6 @@
 {
   "name": "RevStackCore.SQLServer",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "SQL Server implementation of the RevStackCore repository pattern",
   "main": "RevStackCore.SQLServer.sln",
   "scripts": {

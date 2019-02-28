@@ -3,10 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>RevStackCore.SQLServer</PackageId>
-    <PackageVersion>2.1.0</PackageVersion>
+    <PackageVersion>2.1.1</PackageVersion>
     <Description>SQL Server implementation of the RevStackCore repository pattern.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Net Standard 1.6 release</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/RevStackCore/SQLServer.git</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/RevStackCore/SQLServer/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://s3.amazonaws.com/revstack/icons/revstackcore-64x64.png</PackageIconUrl>
+    <PackageReleaseNotes>Net Standard 2.0 release</PackageReleaseNotes>
     <Copyright>Copyright 2019</Copyright>
     <PackageTags>SQL Server RevStackCore</PackageTags>
   </PropertyGroup>
