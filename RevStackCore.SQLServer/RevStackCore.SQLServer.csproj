@@ -1,25 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <PackageId>RevStackCore.SQLServer</PackageId>
-    <PackageVersion>2.3.0</PackageVersion>
+    <PackageVersion>9.0.0</PackageVersion>
     <Description>SQL Server implementation of the RevStackCore repository pattern.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/RevStackCore/SQLServer.git</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RevStackCore/SQLServer/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl>https://s3.amazonaws.com/revstack/icons/revstackcore-64x64.png</PackageIconUrl>
     <PackageReleaseNotes>Net Standard 2.0 release</PackageReleaseNotes>
-    <Copyright>Copyright 2019</Copyright>
+    <Copyright>Copyright 2025</Copyright>
     <PackageTags>SQL Server RevStackCore</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
     <PackageReference Include="RevStackCore.Extensions" Version="1.1.1" />
     <PackageReference Include="RevStackCore.Pattern" Version="1.0.5" />
+    <PackageReference Include="RevStackCore.Pattern.SQL" Version="9.0.0" />
+    <PackageReference Include="RevStackCore.SQL.Client" Version="9.0.0" />
     <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
-    <PackageReference Include="RevStackCore.SQL.Client" Version="1.3.0" />
-    <PackageReference Include="RevStackCore.Pattern.SQL" Version="1.1.2" />
   </ItemGroup>
   
   <ItemGroup>
