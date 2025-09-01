@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/4k7x5yunrvcaajce/branch/master?svg=true)](https://ci.appveyor.com/project/tachyon1337/sqlserver-m38ks/branch/master)
 
 
-A SQL Server implementation of the RevStackCore repository pattern with POCO First Support
+A SQL Server implementation of the RevStackCore repository pattern with POCO First Support. Current version 9.0.0 targets net 9.0. For earlier .net core versions, use version 2.3.0 that targets netstandard2.0.
 
 # Nuget Installation
 
